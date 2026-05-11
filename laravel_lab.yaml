@@ -1,0 +1,313 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1778490460766
+  modified: 1778490460766
+  description: ""
+collection:
+  - name: lab-laravel
+    meta:
+      id: fld_781b30b98aa2417abbfb18ccb365a0b9
+      created: 1778493378747
+      modified: 1778494777486
+      sortKey: -1778493378747
+      description: ""
+    children:
+      - url: "{{ _.url }}api/register"
+        name: register
+        meta:
+          id: req_a141f6fe1ea542da82c0c8e61fc1db10
+          created: 1778493538354
+          modified: 1778494734299
+          isPrivate: false
+          description: ""
+          sortKey: -1778493538054
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "name": "Иван Петров",
+                "email": "ivan1@example.com",
+                "password": "password1231",
+                "password_confirmation": "password1231"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/tickets"
+        name: tikets
+        meta:
+          id: req_2bebd399443e4096811cca8bd2b1a431
+          created: 1778493682149
+          modified: 1778494112122
+          isPrivate: false
+          description: ""
+          sortKey: -1778493538104
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+                "title": "Не работает авторизация",
+                "body": "При входе получаю ошибку 500."
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/tickets"
+        name: tickets
+        meta:
+          id: req_66c336864e6341b3a1632e841bffe414
+          created: 1778493703632
+          modified: 1778493900324
+          isPrivate: false
+          description: ""
+          sortKey: -1778493538154
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/tickets/1"
+        name: tickets-id
+        meta:
+          id: req_e025866c432d4f9fabb1da972be876da
+          created: 1778493723215
+          modified: 1778494570524
+          isPrivate: false
+          description: ""
+          sortKey: -1778493723215
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/tickets/1/comments"
+        name: comment_add
+        meta:
+          id: req_5f9d98f2e2244075a9eafb4e0ace414d
+          created: 1778493764213
+          modified: 1778494544321
+          isPrivate: false
+          description: ""
+          sortKey: -1778493764213
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "body": "Проверьте логи в storage/logs/laravel.log"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/tickets/1"
+        name: update-ticket
+        meta:
+          id: req_26c1e43c903e4da582989fef0c8d0ba8
+          created: 1778493781223
+          modified: 1778494596577
+          isPrivate: false
+          description: ""
+          sortKey: -1778493781223
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "status": "in_progress"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/tickets/"
+        name: ticket
+        meta:
+          id: req_a169851890624ab58c7d68cb75583d5e
+          created: 1778493820712
+          modified: 1778493954053
+          isPrivate: false
+          description: ""
+          sortKey: -1778493820712
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/tickets/id/comments/id"
+        name: comment
+        meta:
+          id: req_f0f928d0f0b24be5913a0b1c9e3909f5
+          created: 1778493827234
+          modified: 1778493975502
+          isPrivate: false
+          description: ""
+          sortKey: -1778493827234
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/login"
+        name: login
+        meta:
+          id: req_9d7ce1f9816547d5843f63348018f92c
+          created: 1778494646322
+          modified: 1778494706819
+          isPrivate: false
+          description: ""
+          sortKey: -1778494646322
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}api/logout"
+        name: logout
+        meta:
+          id: req_7c66af67678a44b3b4740f8ad179b76d
+          created: 1778494660022
+          modified: 1778494700759
+          isPrivate: false
+          description: ""
+          sortKey: -1778494660022
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    authentication:
+      type: bearer
+      token: 2|ZtFJq7T0p4QXneLqm5RBShzy7B2I1ifUBFXwNrrA792bc03e
+      prefix: ""
+    environment:
+      url: https://friendly-space-invention-5gxvqp4pgrvg37pqg-8000.app.github.dev/
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1778490491046
+    modified: 1778494817263
+  cookies:
+    - id: 1fb17039-c86e-4305-a925-95344f8f3fa3
+      key: .Tunnels.Relay.WebForwarding.Cookies
+      value: CfDJ8NJJuTEdEi5KqensronCVW2UBBPea_0U5PlMjPq6TnYETvCLDOQafvHdD8pPGBuhqgCwh_YW7NGJKTUchcvcN7IwdVCbtcqeXi6-bmZsVz7qsoB_MUZvjv1SUfBT8GaMR_8hvhTd7Ui-k8IQXPfWpmNJLHBEvBCNlCYKzY0bYSEizQS19uH8B4KWr-5re6WZNTypptouN_Z53xLvYQU8zTIsZ4-lVI5znnY72et5PK7PQQdxWBPz2mXpPmuTcPTmppbTwGX4s_7b2_70onTzPfsR4P9aJC902CoeRNPp-_MfeVXXXj7x4c7F10aNbom5f9km4YdPd8gdtyA_DXm0V6fj5a72U8xe79KP0ioU2QfX8abcW62GMl51xXNSuhRCspjtHBdiCCzEOgixu7ru4dVeQm5k0XXGIu8O28RZ8UK5bQKlJ9SWXDMUDyje-5XHpY-c8TomCTKfuMI4sAukzzaSl2kHReKVi4i5tJ_Xec424IIXlmMKg8lsJpM_z7HA2R9M14iuqXDvThOAVryJGAlMfPOTH2_eZPNncoQfuMqDjt-IxpbQ_PBxp-Ih8OJD3-DdMC8v7gNiw-gvrFX7cBjilc8umGn-2vmKoxsZC7RTF6122h3K1IiTVxEJP9xQ1fwjjqf9wI9DM37Ap_laeGh6lfWl_ItJVna5YVgjC1xelcLcNS441hUXK6twcfh01dRwxvoWNyp0waMwiyGYoVDJDfuxLKNFFrjPPQFFgBekzQ8f2UaHg_KjQ86xAjBJEL0u5eedI__Acz2lXW793h8zEeBSucMZv6JfYUWk1mB_kuK8mUiRimShVh6BRSxNnAC8wcguNDQWS0Fn_s89_pssMr5ckAAmvhQ85vEXCiGC7hsUYCAeQAuBXlB9nOETgRQ_neuv8ribBzQzHioL9g4vZNCzvH1e23I3JX8VYyDf-HPRW5Jlmr_sXKOuQgHh453uQDl6R61fuoxxmTJek3cq4qHuP7NUDdSopzA42shY
+      domain: friendly-space-invention-5gxvqp4pgrvg37pqg-8000.app.github.dev
+      path: /
+      secure: true
+      httpOnly: false
+      extensions:
+        - Partitioned
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1778490491044
+    modified: 1778490491044
+    isPrivate: false
